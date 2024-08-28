@@ -1,11 +1,14 @@
 package steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import pages.HomePage;
 import pages.LoginPage;
 import runner.RunCucumberTest;
+import support.ScreenshotUtils;
 
 public class LoginSteps extends RunCucumberTest {
 
@@ -31,7 +34,12 @@ public class LoginSteps extends RunCucumberTest {
 
     @Então("vejo a mensagem Login realizado")
     public void vejo_a_mensagem_login_realizado() {
+
         loginPage.validaMenssagemLoginSucesso();
     }
 
+    @After
+    public static void takeScreenshot(Scenario scenario) {
+        ScreenshotUtils.addScreenshotOnScenario(scenario);
+    }
 }

@@ -53,6 +53,7 @@ public class LoginPage extends RunCucumberTest {
     }
 
     public void botaoOk() {
+
         clickElement(btn_ok);
     }
 }

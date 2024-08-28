@@ -1,10 +1,11 @@
-runner\RunCucumberTest.class
 steps\LoginSteps.class
-support\Commands.class
 support\Utils.class
 runner\RunBase.class
 pages\LoginPage.class
 pages\HomePage.class
-pages\CadastroPage.class
 steps\CadastroSteps.class
+support\ScreenshotUtils.class
 steps\HomeSteps.class
+runner\RunCucumberTest.class
+support\Commands.class
+pages\CadastroPage.class

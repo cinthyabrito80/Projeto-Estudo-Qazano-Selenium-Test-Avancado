@@ -30,7 +30,7 @@ public class Commands extends RunCucumberTest {
         System.out.println("#--------------------------------------------------------------#");
         try {
             System.out.println("********** Vai clicar no elemento: " + element);
-            waitElementBeClickable(element, 10000);
+            //waitElementBeClickable(element, 10000);
             getDriver().findElement(element).click();
             System.out.println("********** Clicou no elemento: " + element);
         } catch (Exception error){

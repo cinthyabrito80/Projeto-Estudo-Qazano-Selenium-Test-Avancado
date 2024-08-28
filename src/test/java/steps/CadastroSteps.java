@@ -1,11 +1,14 @@
 package steps;
 
+import io.cucumber.java.After;
+import io.cucumber.java.Scenario;
 import io.cucumber.java.pt.Dado;
 import io.cucumber.java.pt.Então;
 import io.cucumber.java.pt.Quando;
 import pages.CadastroPage;
 import pages.HomePage;
 import runner.RunCucumberTest;
+import support.ScreenshotUtils;
 
 public class CadastroSteps extends RunCucumberTest {
 
@@ -31,5 +34,10 @@ public class CadastroSteps extends RunCucumberTest {
     public void vejo_a_mensagem_cadastro_realizado() {
         cadastroPage.validaMenssagemCadastroSucesso();
         cadastroPage.botaoOk();
+    }
+
+    @After
+    public static void takeScreenshot(Scenario scenario) {
+        ScreenshotUtils.addScreenshotOnScenario(scenario);
     }
 }
