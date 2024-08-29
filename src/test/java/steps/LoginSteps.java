@@ -40,6 +40,7 @@ public class LoginSteps extends RunCucumberTest {
 
     @After
     public static void takeScreenshot(Scenario scenario) {
+
         ScreenshotUtils.addScreenshotOnScenario(scenario);
     }
 }

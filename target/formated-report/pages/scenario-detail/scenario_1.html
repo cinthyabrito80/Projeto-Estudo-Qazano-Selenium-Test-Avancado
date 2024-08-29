@@ -89,10 +89,10 @@ font-src * data: blob: 'unsafe-inline';"/>
     "datasets": [
       {
         "data": [
-          5,
+          4,
           0,
+          7,
           0,
-          2,
           0,
           0,
           0,
@@ -118,9 +118,9 @@ font-src * data: blob: 'unsafe-inline';"/>
           0,
           0,
           0,
-          0,
-          0,
-          0
+          1,
+          1,
+          1
         ],
         "backgroundColor": [
           "rgba(220, 53, 69, 1.000)",
@@ -182,7 +182,7 @@ font-src * data: blob: 'unsafe-inline';"/>
         {
           "ticks": {
             "min": 0,
-            "stepSize": 5,
+            "stepSize": 7,
             "display": true
           },
           "stacked": true,
@@ -285,7 +285,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 <a class="nav-link " href="pages/feature-summary.html">All Features</a>
                     </li>
             </ul>
-            <span class="text-light">2024-08-28 15:04:13</span>
+            <span class="text-light">2024-08-28 21:40:10</span>
         </div>
     </nav>
     <main role="main" class="container">
@@ -314,9 +314,9 @@ font-src * data: blob: 'unsafe-inline';"/>
         <div class="card h-100">
                 <div class="card-header">Scenario Info</div>
             <div class="card-body">
-                <li class="list-group-item">Started on:<br>2024-08-28 15:03:04</li>
-                <li class="list-group-item">Ended on:<br>2024-08-28 15:03:13</li>
-            <li class="list-group-item">Test Runtime:<br>0m 08s 663ms</li>
+                <li class="list-group-item">Started on:<br>2024-08-28 21:39:36</li>
+                <li class="list-group-item">Ended on:<br>2024-08-28 21:39:54</li>
+            <li class="list-group-item">Test Runtime:<br>0m 17s 478ms</li>
             <li class="list-group-item">
                     <a href="pages/tag-scenarios/tag_cadastrousuariosucesso.html">@cadastrousuariosucesso</a>            </li>
             </div>
@@ -332,11 +332,11 @@ font-src * data: blob: 'unsafe-inline';"/>
 
                 </li>
                 <li class="list-group-item">
-                    5 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
+                    4 passed     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
        title="passed"><span style="display:none">passed</span></i>
 
                     <br>
-                    0 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+                    1 failed     <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
        title="failed"><span style="display:none">failed</span></i>
 
                     <br>
@@ -369,7 +369,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 05s 061ms
+                                0m 04s 995ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -388,7 +388,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 472ms
+                                0m 00s 528ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -407,7 +407,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 657ms
+                                0m 07s 027ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -426,7 +426,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 02s 258ms
+                                0m 00s 002ms
                             </div>
                             <div class="col-1 text-right">
     <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
@@ -436,7 +436,7 @@ font-src * data: blob: 'unsafe-inline';"/>
                         </div>
 
 
-                        <div class="row row_passed table-row-passed">
+                        <div class="row row_failed table-row-failed">
                             <div class="col-9 text-left">
                                 <span class="text-left">5.</span>
                                 <span data-toggle="tooltip" title="steps.CadastroSteps.vejo_a_mensagem_cadastro_realizado()">
@@ -445,13 +445,37 @@ font-src * data: blob: 'unsafe-inline';"/>
                                 </span>
                             </div>
                             <div class="col-2 text-left small">
-                                0m 00s 210ms
+                                0m 00s 008ms
                             </div>
                             <div class="col-1 text-right">
-    <i class="color-passed cluecumber-icon icon-passed" data-toggle="tooltip"
-       title="passed"><span style="display:none">passed</span></i>
+    <i class="color-failed cluecumber-icon icon-failed" data-toggle="tooltip"
+       title="failed"><span style="display:none">failed</span></i>
                             </div>
 
+        <div class="row w-100 p-3 m-0 scenarioErrorMessage">
+            <div class="w-100 text-left border border-danger">
+                <pre class="text-danger small p-2">org.openqa.selenium.NoSuchSessionException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'CINTIA_BRITO', ip: '192.168.0.99', os.name: 'Windows 10', os.arch: 'x86', os.version: '10.0', java.version: '1.8.0_202'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:125)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	at support.Commands.waitElementBeVisible(Commands.java:25)
+	at support.Commands.checkMessage(Commands.java:63)
+	at pages.CadastroPage.validaMenssagemCadastroSucesso(CadastroPage.java:71)
+	at steps.CadastroSteps.vejo_a_mensagem_cadastro_realizado(CadastroSteps.java:35)
+	at &#226;&#339;&#189;.vejo a mensagem Cadastro realizado(<a href='file:///C:/AuthTreinamento/AutomacaoWeb/AuthJava/QazanoSeleniumTestAvancado/src/test/resources/features/cadastro_usuario.feature:14)' target='_blank'>file:///C:/AuthTreinamento/AutomacaoWeb/AuthJava/QazanoSeleniumTestAvancado/src/test/resources/features/cadastro_usuario.feature:14)</a>
+</pre>
+            </div>
+        </div>
                         </div>
                 </li>
             </div>
@@ -464,7 +488,7 @@ font-src * data: blob: 'unsafe-inline';"/>
 
 <footer class="footer navbar-dark">
     <div class="container-fluid">
-        <span>Cluecumber Report Plugin version 2.8.0 - Report generated on 2024-08-28 15:04:13.</span>
+        <span>Cluecumber Report Plugin version 2.8.0 - Report generated on 2024-08-28 21:40:10.</span>
     </div>
 </footer>    </body>
     </html>

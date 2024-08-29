@@ -16,7 +16,7 @@ public class CadastroPage extends RunCucumberTest {
     private By valida_tela_cadastro = By.xpath("//*[text()='Cadastro de usuário']");
     private By inserir_nome = By.id("user");
     private By inserir_email = By.id("email");
-    private By inserir_senha = By.id("password");
+    private By inserir_senha = By.id("passwor");
     private By btn_cadastrar = By.id("btnRegister");
 
     //-- Valida mensagem de sucesso no popup
@@ -55,12 +55,13 @@ public class CadastroPage extends RunCucumberTest {
                 WebElement element = getDriver().findElement(btn_cadastrar);
                 JavascriptExecutor js = (JavascriptExecutor) getDriver();
                 js.executeScript("arguments[0].scrollIntoView(true)", element);
-                Thread.sleep(2000);
+                Thread.sleep(1);
                 Assert.assertEquals("Não exibiu o botão",true, getDriver().findElement(btn_cadastrar).isDisplayed());
                 getDriver().findElement(btn_cadastrar).click();
             System.out.println("********** Fez scroll e clicou no elemento: " + btn_cadastrar);
         } catch (Exception error){
             System.out.println("********** Aconteceu um erro ao encontrar o elemento: " + btn_cadastrar);
+            getDriver().quit();
             new Exception(error);
         }
         System.out.println("#--------------------------------------------------------------#");

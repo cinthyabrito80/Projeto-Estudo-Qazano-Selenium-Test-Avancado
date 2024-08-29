@@ -14,14 +14,11 @@ public class ScreenshotUtils {
         System.out.println("Tag: " + scenario.getSourceTagNames());
         System.out.println("#--------------------------------------------------------------#");
 
-        if (scenario.isFailed()) {
-            // Verifica se o WebDriver é uma instância de TakesScreenshot
-            if (getDriver() instanceof TakesScreenshot) {
-                // Tirar a captura de tela
-                byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
-                // Adicionar a captura de tela ao relatório
-                scenario.attach(screenshot, "image/png", "index");
-            }
+        if(scenario.isFailed()) {
+            //tirar print da tela
+            ScreenshotUtils.addScreenshotOnScenario(scenario);
+            byte[] screenshot = ((TakesScreenshot) getDriver()).getScreenshotAs(OutputType.BYTES);
+            scenario.attach(screenshot, "image/png", "index");
         }
 
     }

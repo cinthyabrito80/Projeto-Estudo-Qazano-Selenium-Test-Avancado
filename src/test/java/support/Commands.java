@@ -30,12 +30,13 @@ public class Commands extends RunCucumberTest {
         System.out.println("#--------------------------------------------------------------#");
         try {
             System.out.println("********** Vai clicar no elemento: " + element);
-            //waitElementBeClickable(element, 10000);
+            waitElementBeClickable(element, 5);
             getDriver().findElement(element).click();
             System.out.println("********** Clicou no elemento: " + element);
         } catch (Exception error){
             System.out.println("********** Aconteceu um erro ao tentar clicar no elemento: " + element);
             System.out.println(error);
+            getDriver().quit();
         }
         System.out.println("#--------------------------------------------------------------#");
     }
@@ -44,12 +45,13 @@ public class Commands extends RunCucumberTest {
         System.out.println("#--------------------------------------------------------------#");
         try {
             System.out.println("********** Vai preencher o campo: " + element);
-            waitElementBeVisible(element, 10000);
+            waitElementBeVisible(element, 5);
             getDriver().findElement(element).sendKeys(value);
             System.out.println("********** Preencheu o campo: " + element);
         } catch (Exception error){
             System.out.println("********** Aconteceu um erro ao tentar preencher o campo: " + element);
             System.out.println(error);
+            getDriver().quit();
         }
         System.out.println("#--------------------------------------------------------------#");
     }
@@ -58,7 +60,7 @@ public class Commands extends RunCucumberTest {
         String actualMessage = "";
             System.out.println("#--------------------------------------------------------------#");
             System.out.println("********** Vai validar a mensagem: " + expectedMessage);
-            waitElementBeVisible(element, 10000);
+            waitElementBeVisible(element, 5);
             actualMessage = getDriver().findElement(element).getText();
             //validação de erro a abaixo
             Assert.assertEquals("Erro ao validar mensagem! ", expectedMessage, actualMessage);
