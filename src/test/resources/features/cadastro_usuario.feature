@@ -1,5 +1,6 @@
 #language: pt
 
+  @cadastro
   Funcionalidade: Cadastro de usuário
     Eu como novo usuários
     Quero me cadastrar na aplicação
