@@ -9,11 +9,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    # clonar o projeto na maquina
+      # Clonar o projeto na máquina
       - name: Clonar o projeto
         uses: actions/checkout@v3
 
-    # instalar o java
+      # Instalar o Java 11
       - name: Instalar Java 11
         uses: actions/setup-java@v4
         with:
@@ -21,21 +21,17 @@ jobs:
           java-version: '11'
           cache: 'maven'
 
-    # instalar o chrome
-    - name: Instalar o chrome
-      uses: browser-actions/setup-chrome@v1
-      #run: |
-        #wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-        #sudo apt install ./google-chrome-stable_current_amd64.deb
-        #run: chrome --version
+      # Instalar o Chrome
+      - name: Instalar o Chrome
+        uses: browser-actions/setup-chrome@v1
 
-    # instalar o chrome driver (para windows)
-    - name: Instalar chrome driver
-      uses: nanasess/setup-chromedriver@v2
-      run: chromedriver --url-base=/wd/hub &
+      # Instalar o ChromeDriver (para Windows)
+      - name: Instalar ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
 
-    # executar os testes
-    - name: Executar Testes (Run Test)
-      run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci
+      # Executar os testes
+      - name: Executar Testes (Run Test)
+        run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci
 
-    # gerar relatorio
+      # Gerar relatório
+      # (Aqui você pode adicionar o passo de gerar relatório, se necessário)
