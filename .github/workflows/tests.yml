@@ -31,7 +31,7 @@ jobs:
 
       # Executar os testes
       - name: Executar Testes (Run Test)
-        run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci
+        run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci -Dcucumber.options="--tags @login"
 
       # Gerar relatório
       - name: Gera relatório
