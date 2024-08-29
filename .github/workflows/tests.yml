@@ -1,0 +1,37 @@
+name: Smoke Tests - PR
+
+on:
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  RunTest:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clonar o projeto na máquina
+      - name: Clonar o projeto
+        uses: actions/checkout@v3
+
+      # Instalar o Java 11
+      - name: Instalar Java 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          cache: 'maven'
+
+      # Instalar o Chrome
+      - name: Instalar o Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      # Instalar o ChromeDriver (para Windows)
+      - name: Instalar ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+
+      # Executar os testes
+      - name: Executar Testes (Run Test)
+        run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci
+
+      # Gerar relatório
+      # (Aqui você pode adicionar o passo de gerar relatório, se necessário)

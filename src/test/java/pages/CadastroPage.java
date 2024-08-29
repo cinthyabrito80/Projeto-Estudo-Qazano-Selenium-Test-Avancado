@@ -16,7 +16,7 @@ public class CadastroPage extends RunCucumberTest {
     private By valida_tela_cadastro = By.xpath("//*[text()='Cadastro de usuário']");
     private By inserir_nome = By.id("user");
     private By inserir_email = By.id("email");
-    private By inserir_senha = By.id("passwor");
+    private By inserir_senha = By.id("password");
     private By btn_cadastrar = By.id("btnRegister");
 
     //-- Valida mensagem de sucesso no popup

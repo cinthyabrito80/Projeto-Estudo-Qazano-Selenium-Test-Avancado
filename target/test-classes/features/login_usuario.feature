@@ -1,5 +1,6 @@
 #language: pt
 
+  @login
   Funcionalidade: Login de usuário
     Eu como usuária
     Quero logar no site Qazano shop
