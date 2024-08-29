@@ -1,0 +1,52 @@
+name: Schedule Tests
+
+on:
+  schedule:
+    # minuto: '0/5' vai executar a cada 5 minutos
+    # horas: vai executar '*' toda hora
+    # dia: vai executar '*' todos os dias
+    # mes: vai executar entre os meses '8-9'
+    # dia da semana: vai executar entre os dias '1-5' (de segunda a sexta)
+    - cron: '0/5 * * 8-9 1-5'
+
+jobs:
+  RunTest:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Clonar o projeto na máquina
+      - name: Clonar o projeto
+        uses: actions/checkout@v3
+
+      # Instalar o Java 11
+      - name: Instalar Java 11
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'adopt'
+          java-version: '11'
+          cache: 'maven'
+
+      # Instalar o Chrome
+      - name: Instalar o Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      # Instalar o ChromeDriver (para Windows)
+      - name: Instalar ChromeDriver
+        uses: nanasess/setup-chromedriver@v2
+
+      # Executar os testes
+      - name: Executar Testes (Run Test)
+        run: mvn test -Dtest=RunCucumberTest -Dbrowser=chrome-ci
+
+      # Gerar relatório
+      - name: Gera relatório
+        if: always()
+        run: mvn cluecumber-report:reporting
+
+      # Arquivar relatorio
+      - name: Arquivar relatorio
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-tests
+          path: '**/formated-report/'
