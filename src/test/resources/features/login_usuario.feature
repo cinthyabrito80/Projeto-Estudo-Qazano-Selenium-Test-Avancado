@@ -10,6 +10,6 @@
   Cenário: Fazer login com usario e senha validos
     Dado que estou no site QazanoShop
     E acesso login
-    #Quando preencho o formulário de login de usuário
-    E clico em Login
+    Quando preencho o formulário de login de usuário
+    #E clico em Login
     Então vejo a mensagem Login realizado
