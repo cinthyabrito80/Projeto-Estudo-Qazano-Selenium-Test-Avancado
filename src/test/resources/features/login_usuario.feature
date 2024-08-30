@@ -11,5 +11,5 @@
     Dado que estou no site QazanoShop
     E acesso login
     Quando preencho o formulário de login de usuário
-    #E clico em Login
+    E clico em Login
     Então vejo a mensagem Login realizado
