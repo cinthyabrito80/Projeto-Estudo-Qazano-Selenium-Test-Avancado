@@ -11,8 +11,6 @@ public class RunBase {
 
     static WebDriver driver;
 
-    //public enum Browser {CHROME, FIREFOX, EDGE}
-
     public static WebDriver getDriver(){
         return driver;
     }
