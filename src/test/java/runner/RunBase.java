@@ -26,6 +26,7 @@ public class RunBase {
     //}
 
     public static WebDriver getDriver(String browser){
+        System.setProperty("webdriver.chrome.driver", "C:\\AuthTreinamento\\Drivers\\128.0.6613.86\\chromedriver.exe");
 
         if(driver !=  null){
             driver.quit();
